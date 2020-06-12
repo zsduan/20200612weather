@@ -1,0 +1,196 @@
+.weather-box {
+  color: #fff;
+}
+li {
+  list-style: none;
+}
+.morning {
+  background-image: linear-gradient(to bottom, #5476FE, #6FB1FF);
+}
+.afterday {
+  background-image: linear-gradient(to bottom, #FD7537, #FFAB53);
+}
+.night {
+  background-image: linear-gradient(to bottom, #4B36FF, #B560FB);
+}
+.one-text {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: center;
+}
+.weather-box {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.weather-box .system {
+  position: sticky;
+  top: 0;
+  height: 0.24rem;
+}
+.weather-box .search {
+  padding: 0.1rem;
+}
+.weather-box .search .location {
+  width: 1rem;
+  height: 0.3rem;
+}
+.weather-box .search .search-box {
+  width: calc(100% - 1.5rem);
+  height: 0.3rem;
+  margin-left: 0.2rem;
+  padding: 0 0.15rem;
+  border-radius: 0.15rem;
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.65));
+}
+.weather-box .search .location-text {
+  font-size: 0.16rem;
+  line-height: 0.3rem;
+  width: 0.76rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: center;
+}
+.weather-box .search .location-icon {
+  width: 0.24rem;
+  height: 0.24rem;
+  background: url("../images/location.png") no-repeat center center;
+  background-size: cover;
+  margin-top: 0.03rem;
+}
+.weather-box .search .search-icon {
+  width: 0.24rem;
+  height: 0.24rem;
+  background: url("../images/search.png") no-repeat center center;
+  background-size: cover;
+  margin-top: 0.03rem;
+}
+.weather-box .search .search-ipt {
+  width: calc(100% - .24rem);
+  height: 0.3rem;
+  color: #fff;
+}
+.tem {
+  width: 90%;
+  height: 1.7rem;
+  margin: 0 auto;
+  margin-top: 0.1rem;
+}
+.tem .du {
+  color: #fff;
+  font-size: 0.74rem;
+  text-align: center;
+  display: inline-block;
+  width: 100%;
+  padding-left: 0.17rem;
+}
+.tem .details {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  margin-top: 0.05rem;
+}
+.recommend {
+  width: 95%;
+  height: 100px;
+  margin: 0 auto;
+}
+.recommend ul {
+  width: 100%;
+  height: 0.45rem;
+  text-align: center;
+  padding-left: 0.25rem;
+}
+.recommend ul li {
+  float: left;
+  position: relative;
+  width: 1rem;
+  height: 0.4rem;
+}
+.recommend ul li span {
+  display: block;
+}
+.recommend ul li b {
+  display: block;
+  width: 2px;
+  height: 0.3rem;
+  border-left: 1px solid #fff;
+  position: absolute;
+  top: 0.1rem;
+}
+.recommend p {
+  text-align: center;
+  width: 100%;
+}
+.delayed {
+  width: 95%;
+  height: 2rem;
+  margin-top: 0.2rem;
+  margin: 0 auto;
+}
+.delayed .delayed-title ul {
+  width: 100%;
+  height: 0.5rem;
+}
+.delayed .delayed-title ul::after {
+  display: block;
+  content: "";
+  clear: both;
+}
+.delayed .delayed-title ul .zs {
+  text-align: left;
+  margin-left: 5%;
+  width: 45%;
+}
+.delayed .delayed-title ul li {
+  position: relative;
+  float: left;
+  width: 50%;
+  text-align: right;
+}
+.delayed .delayed-title ul li:first-child span:last-child {
+  position: absolute;
+  top: 0.3rem;
+  right: 0.06rem;
+  display: block;
+}
+.delayed .delayed-title ul li:last-child span:last-child {
+  position: absolute;
+  top: 0.3rem;
+  left: 0.06rem;
+}
+.delayed .delayed-title ul li span {
+  display: inline-block;
+}
+.delayed .delayed-title ul li .line {
+  display: none;
+  width: 0.5rem;
+  height: 2px;
+  border-bottom: 2px solid #fff;
+}
+.delayed .content ul {
+  width: 100%;
+  display: none;
+}
+.delayed .content ul:first-child {
+  display: none;
+}
+.delayed .content ul > li {
+  float: left;
+  width: 20%;
+}
+.delayed .content ul > li ol {
+  padding: 0;
+  text-align: center;
+}
+.delayed .content ul > li ol > li:nth-child(3) {
+  margin-top: 0.2rem;
+  margin-bottom: 0.2rem;
+}
+.delayed .content ul > li ol > li img {
+  width: 60%;
+}

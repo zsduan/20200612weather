@@ -1,0 +1,238 @@
+//导入less变量
+@import "./variable";
+
+.setWH(@width , @height){
+  width: @width;
+  height: @height;
+}
+
+.weather-box{
+  color: @fontColor;
+}
+
+li{
+  list-style: none;
+}
+// 6-12
+.morning{
+  background-image: linear-gradient(to bottom, #5476FE, #6FB1FF);
+}
+// 12-19
+.afterday{
+  background-image: linear-gradient(to bottom, #FD7537, #FFAB53);
+}
+// 19-6
+.night{
+  background-image: linear-gradient(to bottom, #4B36FF, #B560FB);
+}
+
+//一行文本溢出截断，以省略号方式显示
+.one-text{
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: center;
+}
+
+.icon-box(@imgName){
+  width: .24rem;
+  height: .24rem;
+  background: url(@imgName) no-repeat center center;
+  background-size: cover;
+  margin-top: .03rem;
+}
+
+.weather-box{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  .system{
+    position: sticky;
+    top: 0;
+    height: .24rem;
+  }
+
+  .search{
+    padding: .1rem;
+
+    .location{
+      width: 1rem;
+      height: .3rem;
+    }
+
+    .search-box{
+      width: calc(~"100% - 1.5rem");
+      height: .3rem;
+      margin-left: .2rem;
+      padding: 0 .15rem;
+      border-radius: .15rem;
+      background-image: linear-gradient(to right, rgba(255, 255, 255, .2), rgba(255, 255, 255, .65));
+    }
+
+    .location-text{
+      font-size: .16rem;
+      line-height: .3rem;
+      width: .76rem;
+      .one-text;
+    }
+
+    .location-icon{
+      .icon-box("@{url}/location.png");
+    }
+
+    .search-icon{
+      .icon-box("@{url}/search.png");
+    }
+
+    .search-ipt{
+      width: calc(~"100% - .24rem");
+      height: .3rem;
+      color: @fontColor
+    }
+  }
+}
+
+// 温度
+.tem{
+  width: 90%;
+  height: 1.7rem;
+  margin: 0 auto;
+  margin-top:.1rem; 
+  .du{
+    color: @fontColor; 
+    font-size: .74rem;
+    text-align: center;
+    display: inline-block;
+    width: 100%;
+    padding-left:.17rem; 
+  }
+  .details{
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    margin-top: .05rem;
+  }
+}
+
+
+// 其他显示
+.recommend{
+  .setWH(95%,100px);
+  // background: red;
+  margin:0 auto; 
+  ul{
+    width: 100%;
+    height: .45rem;
+    text-align: center;
+    padding-left: 0.25rem;
+    li{
+      float: left;
+      position: relative;
+      .setWH(1rem,.4rem);
+      span{
+        display: block;
+      }
+      b{
+        display: block;
+        width: 2px;
+        height: .3rem;
+        border-left: 1px solid #fff;
+        position: absolute;
+        top: 0.1rem;
+      }
+    }
+  }
+  p{
+      text-align: center;
+      width: 100%;
+  }
+}
+
+// 延时天气预报
+.delayed{
+  .setWH(95%,2rem);
+  margin-top:0.2rem;
+  margin: 0 auto; 
+  .delayed-title{
+    ul{
+    &::after{
+      display: block;
+      content: "";
+      clear: both;
+    }
+    width: 100%;
+    height: .5rem;
+    .zs{
+        text-align: left;
+        margin-left: 5%;
+        width: 45%;
+    }
+    li{
+      position: relative;
+      &:first-child{
+        span{
+          &:last-child{
+            position: absolute;
+            top: .3rem;
+            right: .06rem;
+            display: block;
+          }
+        }
+      }
+      &:last-child{
+        span{
+          &:last-child{
+            position: absolute;
+            top: .3rem;
+            left: .06rem;
+          }
+        }
+      }
+      float: left; 
+      width: 50%;
+      text-align: right; 
+      span{
+        display: inline-block;
+      }
+      .line{
+        display: none;
+        width: .5rem;
+        height: 2px;
+        border-bottom: 2px solid #fff;
+      }
+    }
+  }
+  }
+
+  .content{
+    ul{
+      width: 100%;
+      display: none;
+      &:first-child{
+        display: none;
+      }
+      >li{
+        float: left;
+        width: 20%;
+        ol{
+          padding: 0;
+          text-align: center;
+          >li{
+            &:nth-child(3){
+              margin-top:.2rem;
+              margin-bottom: .2rem;  
+            }
+            img{
+                width: 60%;
+              }
+          }
+        }
+      }
+
+    }
+  }
+  
+}
